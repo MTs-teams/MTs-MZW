@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0}
+body{
+	background: url("../img/background.png") no-repeat center center fixed;
+	/*兼容浏览器版本*/
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+ul.topnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: rgba(147,210,243,0.57);
+
+}
+/*图标*/
+ul.topnav li.logo{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	width: 8%;
+	font-size: 24px;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 24px;
+}
+/*鼠标停留*/
+ul.topnav li a:hover:not(.active) {background-color: rgba(255,255,255,0.25);}
+/*选中*/
+ul.topnav li a.active {background-color: rgba(255,255,255,0.25);}
+
+ul.topnav li.right {float: right;}
+
+ul.topnav li.right img.avatar{
+	display: block;
+	padding: 14px 16px;
+	text-decoration: none;
+	Border-radius: 50%;
+	height: 30px;
+}
+ul.topnav li.right i{
+	display: block;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+ul.sidenav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 10%;
+	background-color: rgba(147,210,243,0.57);
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+
+ul.sidenav li a {
+	display: block;
+	color: white;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+ul.sidenav li a.active {
+	background-color: rgba(255,255,255,0.25);
+	color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+	background-color: rgba(255,255,255,0.25);
+	color: white;
+}
+
+div.content {
+	margin-left: 25%;
+	padding: 1px 16px;
+	height: 1000px;
+}
+
+
