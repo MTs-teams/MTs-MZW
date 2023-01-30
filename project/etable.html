@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/css.css" type="text/css">
+    <link rel="stylesheet" href="./icon/css/font-awesome.css">
+    <title>员工表</title>
+    <style  type="text/css">
+        #d1{
+            position: fixed;
+            left: 250px;top:130px;
+        }
+        #d2{
+            position: fixed;
+            left: 400px;top:130px;
+        }
+        #d3{
+            position: fixed;
+            left: 250px;top:230px;
+        }
+        .aa{
+            letter-spacing: 0px;
+        }
+        .page-icon{
+            width: 1200px;
+            margin: 35px auto 0;
+            font-size:0;
+            text-align:center;
+        }
+        .page-icon button {
+            border: none;
+            padding:4px 10px 5px;
+            font-size:20px;
+        }
+        .page-icon button img {
+            width: 15px;
+            height: 15px;
+        }
+        #totalPage, #currentPage {
+             cursor: default;
+             border: none;
+
+             padding:4px 10px 5px;
+             font-size:20PX;
+         }
+        #currentPage {
+            cursor: auto;
+            text-align: center;
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+<!--顶部-->
+<ul class="topnav">
+    <li class="logo">睿瞳云安</li>
+    <!--    <li><a class="active" href="#home">主页</a></li>-->
+    <!--    <li><a href="#news">新闻</a></li>-->
+    <!--    <li><a href="#contact">联系</a></li>-->
+    <li class="right"><a href="#about"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+    <li class="right"><img class="avatar" src="img/avatar.png"></li>
+</ul>
+<!--侧边-->
+<ul class="sidenav">
+    <li><a class="active" href="#home"><i class="fa fa-home"></i> 首页</a></li>
+    <li><a href="#news"><i class="fa fa-video-camera"></i> 智能检测</a></li>
+    <li><a href="#contact"><i class="fa fa-calendar"></i> 巡检日志</a></li>
+    <li><a href="#about"><i class="fa fa fa-calendar-times-o"></i> 违规日志</a></li>
+    <li><a href="#about"><i class="fa fa-address-card"></i> 员工管理</a></li>
+    <li><a href="#about"><i class="fa fa-user-circle"></i> 个人界面</a></li>
+</ul>
+
+<div class="content">
+    <div id="d1">
+        <a href="etable.html"><img width="110" height="50" src="pimg/b1.png"></a>
+    </div>
+    <div id="d2">
+        <a href="gtable.html"><img width="110" height="50" src="pimg/b2.png"></a>
+    </div>
+    <div id="d3">
+        <table width="1200" height="400" border="1" cellspacing="0" bordercolor="grey"
+               style="text-align: center;color: white;font-size: 25px;letter-spacing: 10px">
+            <tr style="background-color: #cecece">
+                <td>工号</td>
+                <td>姓名</td>
+                <td>性别</td>
+                <td>职位</td>
+                <td>联系电话</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>刘一</td>
+                <td>男</td>
+                <td class="aa">建筑师</td>
+                <td class="aa">12345678910</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>陈二</td>
+                <td>男</td>
+                <td class="aa">设计师</td>
+                <td class="aa">12345678910</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>张三</td>
+                <td>男</td>
+                <td class="aa">技术</td>
+                <td class="aa">12345678910</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>李四</td>
+                <td>女</td>
+                <td class="aa">策划</td>
+                <td class="aa">12345678910</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>王五</td>
+                <td>男</td>
+                <td class="aa">监测</td>
+                <td class="aa">12345678910</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>赵六</td>
+                <td>女</td>
+                <td class="aa">信息化工程师</td>
+                <td class="aa">12345678910</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>孙七</td>
+                <td>男</td>
+                <td class="aa">调度</td>
+                <td class="aa">12345678910</td>
+            </tr>
+        </table>
+        <div class="page-icon">
+            <button onclick="first_click()" ><img src="pimg/left-end.png"/></button>
+            <button onclick="prev_click()" ><img src="pimg/page-left.png"/></button>
+            <button>第<input id="currentPage" onchange="choose_page()" type="text" value="1"/>页</button>
+            <button>/&nbsp;&nbsp;&nbsp;共<input id="totalPage" type="button" value="3" readonly="readonly">页</button>
+            <button onclick="next_click()"><img src="pimg/page-right.png"/></button>
+            <button onclick="last_click()"><img src="pimg/right-end.png"/></button>
+        </div>
+    </div>
+</div>
+<script>
+    var page_index = ["page-1", "page-2", "page-3"];
+
+    function page_option(pagename){
+        var tar_index = page_index.indexOf(pagename);
+        page_index.slice(tar_index, 1);
+        for (var j = 0; j < page_index.length ; j++){
+            var close_div = document.getElementsByClassName(page_index[j]);
+            for (var i = 0; i<close_div.length;i++) {
+                close_div[i].style.display="none";
+            };
+        }
+        var opendiv = document.getElementsByClassName(pagename);
+        for (var i = 0; i<opendiv.length;i++) {
+            opendiv[i].style.display="block";
+        };
+    }
+
+    function first_click(){
+        page_option("page-1");
+        document.getElementById('currentPage').value=1;
+    }
+
+    function last_click(){
+        var total_page = document.getElementById('totalPage').value;
+        page_option(page_index[page_index.length - 1]);
+        document.getElementById('currentPage').value=total_page;
+    }
+
+    function prev_click(){
+        var cur_page = document.getElementById('currentPage').value;
+        if (cur_page > 1){
+            document.getElementById('currentPage').value=parseInt(cur_page)-1;
+            var pagename = page_index[parseInt(cur_page)-2];
+            page_option(pagename);
+        }
+    }
+
+    function next_click(){
+        var cur_page = document.getElementById('currentPage').value;
+        var total_page = document.getElementById('totalPage').value;
+        if (cur_page < total_page){
+            document.getElementById('currentPage').value=parseInt(cur_page) + 1;
+            var pagename = page_index[parseInt(cur_page)];
+            page_option(pagename);
+        }
+    }
+
+    function choose_page(){
+        var cur_page = document.getElementById('currentPage').value;
+        var pagename = page_index[parseInt(cur_page)-1];
+        page_option(pagename);
+    }
+</script>
+</body>
+

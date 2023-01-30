@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/css.css" type="text/css">
+    <link rel="stylesheet" href="./icon/css/font-awesome.css">
+    <title>违规行为详情</title>
+    <style  type="text/css">
+        #d1{
+            position: fixed;
+            left: 250px;top:130px;
+            color: white;
+        }
+        #d2{
+            position: fixed;
+            left: 250px;top:230px;
+        }
+        .aa{
+            letter-spacing: 0px;
+        }
+        .ll{
+            position:absolute;
+            top: 0px;
+            z-index: 997;
+        }
+        .bb{
+            position:absolute;
+            top: 90px;
+            left: 490px;
+            z-index: 998;
+        }
+        #cc{
+            position:absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+        #dd{
+            position:absolute;
+            top: 80px;
+            left: 100px;
+            z-index: 999;
+            font-size: 20px;
+        }
+        #ee{
+            position:absolute;
+            top: 80px;
+            left: 340px;
+            z-index: 999;
+            font-size: 20px;
+        }
+        #ff{
+            position:absolute;
+            top: 50px;
+            z-index: 999;
+            font-size: 20px;
+            width: 200px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        #gg{
+            position:absolute;
+            top: 180px;
+            left: 50px;
+            z-index: 999;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .page-icon{
+            width: 1200px;
+            margin: 35px auto 0;
+            font-size:0;
+            text-align:center;
+        }
+        .page-icon button {
+            border: none;
+            padding:4px 10px 5px;
+            font-size:20px;
+        }
+        .page-icon button img {
+            width: 15px;
+            height: 15px;
+        }
+        #totalPage, #currentPage {
+            cursor: default;
+            border: none;
+
+            padding:4px 10px 5px;
+            font-size:20PX;
+        }
+        #currentPage {
+            cursor: auto;
+            text-align: center;
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+<!--顶部-->
+<ul class="topnav">
+    <li class="logo">睿瞳云安</li>
+    <!--    <li><a class="active" href="#home">主页</a></li>-->
+    <!--    <li><a href="#news">新闻</a></li>-->
+    <!--    <li><a href="#contact">联系</a></li>-->
+    <li class="right"><a href="#about"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+    <li class="right"><img class="avatar" src="img/avatar.png"></li>
+</ul>
+<!--侧边-->
+<ul class="sidenav">
+    <li><a class="active" href="#home"><i class="fa fa-home"></i> 首页</a></li>
+    <li><a href="#news"><i class="fa fa-video-camera"></i> 智能检测</a></li>
+    <li><a href="#contact"><i class="fa fa-calendar"></i> 巡检日志</a></li>
+    <li><a href="#about"><i class="fa fa fa-calendar-times-o"></i> 违规日志</a></li>
+    <li><a href="#about"><i class="fa fa-address-card"></i> 员工管理</a></li>
+    <li><a href="#about"><i class="fa fa-user-circle"></i> 个人界面</a></li>
+</ul>
+
+<div class="content">
+    <div id="d1">
+        <h1>监控摄像头3号</h1><br>
+        2023/1/19
+    </div>
+    <div id="d2">
+        <table width="1200" height="400" border="1" cellspacing="0" bordercolor="grey"
+               style="text-align: center;color: white;font-size: 25px;letter-spacing: 4px">
+            <tr style="background-color: #cecece">
+                <td>工号</td>
+                <td>姓名</td>
+                <td>时间</td>
+                <td>行为类型</td>
+                <td>检测图片</td>
+                <td colspan="3">操作</td>
+            </tr>
+            <tr>
+                <td class="aa">SWE20019</td>
+                <td>徐梦真</td>
+                <td class="aa">14：13：01</td>
+                <td>未佩戴口罩</td>
+                <td><img src="pimg/v1.png"></td>
+                <td><a href="#">查看</a></td>
+                <td><a href="#">修改</a></td>
+                <td><a href="#">删除</a></td>
+            </tr>
+            <tr>
+                <td class="aa">CME20015</td>
+                <td>叶汉平</td>
+                <td class="aa">14：36：41</td>
+                <td>未佩戴安全帽</td>
+                <td><img src="pimg/v2.png"></td>
+                <td><a href="#">查看</a></td>
+                <td><a href="#">修改</a></td>
+                <td><a href="#">删除</a></td>
+            </tr>
+            <tr>
+                <td class="aa">SWE20019</td>
+                <td>徐梦真</td>
+                <td class="aa">14：51：20</td>
+                <td>违规抽烟</td>
+                <td><img src="pimg/v3.png"></td>
+                <td><a href="#">查看</a></td>
+                <td><a href="#">修改</a></td>
+                <td><a href="#">删除</a></td>
+            </tr>
+            <tr>
+                <td class="aa">CME20015</td>
+                <td>叶汉平</td>
+                <td class="aa">15：15：31</td>
+                <td>未穿反光衣</td>
+                <td><img src="pimg/v4.png"></td>
+                <td><a href="#">查看</a></td>
+                <td><a href="#">修改</a></td>
+                <td><a href="#">删除</a></td>
+            </tr>
+            <tr>
+                <td class="aa">SWE20019</td>
+                <td>徐梦真</td>
+                <td class="aa">15：15：00</td>
+                <td>未佩戴口罩</td>
+                <td><img src="pimg/v5.png"></td>
+                <td><a href="#">查看</a></td>
+                <td><a href="#">修改</a></td>
+                <td><a href="#">删除</a></td>
+            </tr>
+        </table>
+        <div class="page-icon">
+            <button onclick="first_click()" ><img src="pimg/left-end.png"/></button>
+            <button onclick="prev_click()" ><img src="pimg/page-left.png"/></button>
+            <button>第<input id="currentPage" onchange="choose_page()" type="text" value="1"/>页</button>
+            <button>/&nbsp;&nbsp;&nbsp;共<input id="totalPage" type="button" value="3" readonly="readonly">页</button>
+            <button onclick="next_click()"><img src="pimg/page-right.png"/></button>
+            <button onclick="last_click()"><img src="pimg/right-end.png"/></button>
+        </div>
+    </div>
+</div>
+<div class="ll">
+    <img width="1519" src="pimg/bg.png">
+</div>
+<div class="bb">
+    <img width="600" height="600" src="pimg/bg1.png">
+    <div id="cc">
+        <a href="violations.html"><img src="pimg/close.png"></a>
+    </div>
+    <div id="dd">
+        CME20015<br><br>叶汉平
+    </div>
+    <div id="ee">
+        2023/1/19&nbsp;&nbsp;&nbsp;&nbsp;15:40:01
+        <div id="ff">
+            未佩戴安全帽
+        </div>
+    </div>
+    <div id="gg">
+        <img style="border-radius:10px;border:2px solid black" width="500" height="400" src="pimg/vd.png">
+    </div>
+</div>
+<script>
+    var page_index = ["page-1", "page-2", "page-3"];
+
+    function page_option(pagename){
+        var tar_index = page_index.indexOf(pagename);
+        page_index.slice(tar_index, 1);
+        for (var j = 0; j < page_index.length ; j++){
+            var close_div = document.getElementsByClassName(page_index[j]);
+            for (var i = 0; i<close_div.length;i++) {
+                close_div[i].style.display="none";
+            };
+        }
+        var opendiv = document.getElementsByClassName(pagename);
+        for (var i = 0; i<opendiv.length;i++) {
+            opendiv[i].style.display="block";
+        };
+    }
+
+    function first_click(){
+        page_option("page-1");
+        document.getElementById('currentPage').value=1;
+    }
+
+    function last_click(){
+        var total_page = document.getElementById('totalPage').value;
+        page_option(page_index[page_index.length - 1]);
+        document.getElementById('currentPage').value=total_page;
+    }
+
+    function prev_click(){
+        var cur_page = document.getElementById('currentPage').value;
+        if (cur_page > 1){
+            document.getElementById('currentPage').value=parseInt(cur_page)-1;
+            var pagename = page_index[parseInt(cur_page)-2];
+            page_option(pagename);
+        }
+    }
+
+    function next_click(){
+        var cur_page = document.getElementById('currentPage').value;
+        var total_page = document.getElementById('totalPage').value;
+        if (cur_page < total_page){
+            document.getElementById('currentPage').value=parseInt(cur_page) + 1;
+            var pagename = page_index[parseInt(cur_page)];
+            page_option(pagename);
+        }
+    }
+
+    function choose_page(){
+        var cur_page = document.getElementById('currentPage').value;
+        var pagename = page_index[parseInt(cur_page)-1];
+        page_option(pagename);
+    }
+</script>
+</body>
+
